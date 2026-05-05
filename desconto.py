@@ -7,26 +7,21 @@ print("")
     Se a venda for acima de $300, desconto de 20%.
 """
 
-if 100 <= valor <= 199:
-    desconto = 0.95
-    total = valor * desconto
-    print("Valor sem desconto: R$", valor)
-    print("Valor com desconto: R$", total)
+if valor < 100:
+    print("Valor do produto R$", valor)
     print("")
+    exit()
+
+elif 100 <= valor <= 199:
+    desconto = 0.97
 
 elif 200 <= valor <= 299:
-    desconto = 0.90
-    total = valor * desconto
-    print("Valor sem desconto: R$", valor)
-    print("Valor com desconto: R$", total)
-    print("")
-
-elif valor >= 300:
-    desconto = 0.80
-    total = valor * desconto
-    print("Valor sem desconto: R$", valor)
-    print("Valor com desconto: R$", total)
-    print("")
+    desconto = 0.95
     
-else: print("Valor do produto R$", valor)
+else: valor >= 300
+desconto = 0.90
+
+total = valor * desconto
+print("Valor sem desconto: R$", valor)
+print("Valor com desconto: R$", total)
 print("")

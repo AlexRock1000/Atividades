@@ -11,8 +11,8 @@ for indice, produto in enumerate(produtos):
     quantidade = quantidades[indice]
     subtotal = quantidade * preço
     subtotais.append(subtotal)
-    print(f"Temos o produto: {produto}, que custa R${preço}, na quantidade: {quantidade}, o subtotal é R${subtotal}.\n")
+    print(f"----------------------------\nTemos o produto: {produto}\nque custa R${preço}\nna quantidade: {quantidade}\no subtotal é R${subtotal}.")
 
 total = sum(subtotais)
-print(f"O total é R${total}.")
+print(f"--------------------------\nO total é R${total}.")
 print("")

@@ -1,0 +1,9 @@
+while True:
+    
+    idade = int(input("Digite uma idade: "))
+    
+    if idade >= 0 or idade <= 120:
+        print(f"Idade cadastrada {idade}.")
+        exit()
+
+    else: ("Idade inválida.")

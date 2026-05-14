@@ -7,3 +7,4 @@ while True:
         exit()
 
     else: print("Idade inválida.")
+    

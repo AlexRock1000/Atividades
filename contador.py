@@ -1,4 +1,5 @@
 contador = 0
+numDigitado = []
 
 while True:
     
@@ -11,11 +12,12 @@ while True:
 
     #Verificação se a variável é um numero.
     numero = int(verificaçao)
+    numDigitado.append(numero)
 
     print("(Digite 0 para sair)")
     
     if numero == 0:
-        print(f"Você digitou {contador} vezes.")
+        print(f"Você digitou os numeros: {numDigitado}.")
         break
 
     contador += 1

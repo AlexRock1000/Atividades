@@ -1,12 +1,15 @@
 print("")
+nomeCerto = "ADM"
+senhaCerto = 123
+
 while True:
 
     print("==== LOGIN DE ACESSO ====")
     nome = input("Nome do usuário: ")
     senha = int(input("Senha: "))
 
-    if nome == "adm" and senha == 123:
-        print("Acesso liberado.\n")
+    if nome == nomeCerto and senha == senhaCerto:
+        print("\nAcesso liberado.\n")
         break
 
-    else: print("Acesso negado!\n")
+    else: print("\nAcesso negado!\n")

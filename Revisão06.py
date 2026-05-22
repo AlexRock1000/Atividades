@@ -9,25 +9,22 @@ for i, produto in enumerate(produtos):
 while True:
     print("")
     compra = input("Qual produto você deseja: ")
+    print("")
 
-    if compra == "cabeça":
-        print(f"Sua compra foi: {compra}")
+    if compra in produtos:
+        i = produtos.index(compra)
+        preço = preços[i]
+        if preço <= 100:
+            novoPreço = preço * 1.10
+            print(f"Sua compra foi: {compra}, que custava R${preço}, agora custa R${novoPreço}")
 
-    elif compra == "perna":
-        print(f"Sua compra foi: {compra}")
-
-    elif compra == "braço":
-        print(f"Sua compra foi: {compra}")
-
-    elif compra == "mão":
-        print(f"Sua compra foi: {compra}")
-
-    else: print("Esse produto não temos.")
-
-    continu = input("Desja compra mias? ")
-
-    if continu == "n":
-        print("Adeus.")
+        else: print(f"Sua compra foi: {compra}, custando R${preço}")
         print("")
+
+    else: print("Esse produto não temos.\n")
+
+    if input("Deseja comprar mais? ").lower() == "n":
+        print("")
+        print("Adeus.\n")
         exit()
 

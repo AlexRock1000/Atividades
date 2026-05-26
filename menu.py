@@ -1,5 +1,6 @@
 serviços = ["Troca de óleo", "Rebalanceamento", "Revião"]
 produtos = ["Óleo", "Pneu", "Motor"]
+cliente = []
 
 print("\nBom dia. O que você gostaria hoje?")
 
@@ -58,6 +59,7 @@ while True:
     else: print("\nOpção inválida.\n")
 
     novaOpçao = input("Deseja solicitar mais alguma coisa? ")
+    print("")
     
     if novaOpçao == "nao":
         print("Obrigado por sua preferência.\n")

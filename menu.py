@@ -1,25 +1,64 @@
+serviços = ["Troca de óleo", "Rebalanceamento", "Revião"]
+produtos = ["Óleo", "Pneu", "Motor"]
+
+print("\nBom dia. O que você gostaria hoje?")
+
 while True:
-
-    mensagem = f"""
-    ----------------
-         MENU
-    1. Situação [1]
-    2. Situação [2]
-    3. Sair [3]
-    ----------------
-    """
-    print(mensagem)
+    opçao = input("""
+        ----------------
+               MENU
+         [1] Serviços
+         [2] Produtos
+        ----------------
+        """)
     
-    opçao = input("Escolha uma opção: \n")
-
     if opçao == "1":
-          print("Opçõa 1")
+        serviço = input(f"""
+        ----------------
+            SERVIÇOS
+        [1] {serviços[0]}
+        [2] {serviços[1]}
+        [3] {serviços[2]}
+        ----------------
+        """)
 
-    elif opçao == "2":
-        print("Opção 2")
+        if serviço == "1":
+            print(f"Você solicitou {serviços[0]}.\n")
 
-    elif opçao == "3":
-        print("Saindo do programa...\n")
-        break
+        elif serviço == "2":
+            print(f"Você solicitou {serviços[1]}\n")
+
+        elif serviço == "3":
+            print(f"Você solicitou {serviços[2]}\n")
+        
+        else: print("Opção inválida.\n")
     
-    else: print("Opção inválida.")
+    elif opçao == "2":
+        produto = input(f"""
+        ----------------
+            SERVIÇOS
+        [1] {produtos[0]}
+        [2] {produtos[1]}
+        [3] {produtos[2]}
+        ----------------            
+        """)
+
+        if produto == "1":
+            print(f"{produtos[0]} foi adcionado ao carrinho.\n")
+
+        elif produto == "2":
+            print(f"{produtos[1]} foi adcionado ao carrinho.\n")
+
+        elif produto == "3":
+            print(f"{produtos[2]} foi adcionado ao carrinho.\n")
+
+        else: ("Opção inválida.\n")
+
+
+    else: print("\nOpção inválida.\n")
+
+    novaOpçao = input("Deseja solicitar mais alguma coisa? ")
+    
+    if novaOpçao == "nao":
+        print("Obrigado por sua preferência.\n")
+        exit()                          

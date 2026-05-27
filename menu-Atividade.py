@@ -84,17 +84,19 @@ while True:
     print(f"Total: R$ {total}")
 
     resposta = input("\nDeseja solicitar mais alguma coisa? ")
-    print("")
     
     if resposta in ["Não", "não", "NÃO", "n", "N"]:
         break
 
 if total < 200:
-    print(f"""===========================
-        NOTA FISCAL\n
+    print(f"""
+===========================
+        NOTA FISCAL
+          
 {carrinho} 
-R$ {total}\n
-===========================\n""")
+R$ {total}
+
+===========================""")
     
     print("Obrigado por sua preferência.\n")
     exit()
@@ -103,10 +105,13 @@ else: total >= 200
 desconto = 0.90
 totalFinal = total * desconto
 
-print(f"""===========================
-        NOTA FISCAL\n
+print(f"""
+===========================
+        NOTA FISCAL
+      
 {carrinho} 
-desconto de 10% R$ {totalFinal}\n
-===========================\n""")
+desconto de 10% R$ {totalFinal}
+
+===========================""")
 
 print("Obrigado por sua preferência.\n")

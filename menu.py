@@ -1,5 +1,7 @@
 serviços = ["Troca de óleo", "Rebalanceamento", "Revião"]
+preçoServiços = []
 produtos = ["Óleo", "Pneu", "Motor"]
+preçoProdutos = []
 cliente = []
 
 print("\nBom dia. O que você gostaria hoje?")

@@ -1,3 +1,20 @@
+def somar(a, b):
+    resultado = a + b
+    return resultado
+
+def subtrair(a, b):
+    resultado = a - b
+    return resultado
+
+def multiplicar(a, b):
+    resultado = a * b
+    return resultado
+
+def dividir(a, b):
+    resultado = a / b
+    return resultado
+
+
 while True:
     menu = input(f"""
         CALCULDORA
@@ -21,20 +38,20 @@ while True:
     N2 = int(input("Digite um número: "))
 
     if menu == "1":
-        soma = N1 + N2
-        print(f"\nO resultado é: {soma}\n")
+        resultado = somar(N1, N2)
+        print(f"\nO resultado é: {resultado}\n")
 
     elif menu == "2":
-        subtraçao = N1 - N2
-        print(f"\nO resultado é: {subtraçao}\n")
+        resultado = subtrair(N1, N2)
+        print(f"\nO resultado é: {resultado}\n")
 
     elif menu == "3":
-        multiplicaçao = N1 * N2
-        print(f"\nO resultado é: {multiplicaçao}\n")
+        resultado = multiplicar(N1, N2)
+        print(f"\nO resultado é: {resultado}\n")
 
     elif menu == "4":
         if N1 or N2 != 0:
-            divisão = N1 / N2
-            print(f"\nO resultado é: {divisão}\n")
+            resultado = dividir(N1, N2)
+            print(f"\nO resultado é: {resultado}\n")
 
         else: print(f"\nNão pode dividir por zero.")

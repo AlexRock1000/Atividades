@@ -10,32 +10,27 @@ while True:
 
     """)
 
+    if menu == "0":
+        print("Até mais!\n")
+        break
+
+    N1 = int(input("Digite um número: "))
+    N2 = int(input("Digite um número: "))
+
     if menu == "1":
-        N1 = int(input("Digite um número: "))
-        N2 = int(input("Digite um número: "))
         soma = N1 + N2
         print(f"O resultado é: {soma}\n")
 
     elif menu == "2":
-        N3 = int(input("Digite um número: "))
-        N4 = int(input("Digite um número: "))
-        subtraçao = N3 - N4
+        subtraçao = N1 - N2
         print(f"O resultado é: {subtraçao}\n")
 
     elif menu == "3":
-        N5 = int(input("Digite um número: "))
-        N6 = int(input("Digite um número: "))
-        multiplicaçao = N5 * N6
+        multiplicaçao = N1 * N2
         print(f"O resultado é: {multiplicaçao}\n")
 
     elif menu == "4":
-        N7 = int(input("Digite um número: "))
-        N8 = int(input("Digite um número: "))
-        divisão = N7 / N8
+        divisão = N1 / N2
         print(f"O resultado é: {divisão}\n")
-
-    elif menu == "0":
-        print("Até mais!\n")
-        break
 
     else: print("Opção inválida.")

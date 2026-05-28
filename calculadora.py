@@ -14,23 +14,27 @@ while True:
         print("Até mais!\n")
         break
 
+    if menu not in ["1", "2", "3", "4", "0"]:
+        print("\nOpção inválida.\n")
+
     N1 = int(input("Digite um número: "))
     N2 = int(input("Digite um número: "))
 
     if menu == "1":
         soma = N1 + N2
-        print(f"O resultado é: {soma}\n")
+        print(f"\nO resultado é: {soma}\n")
 
     elif menu == "2":
         subtraçao = N1 - N2
-        print(f"O resultado é: {subtraçao}\n")
+        print(f"\nO resultado é: {subtraçao}\n")
 
     elif menu == "3":
         multiplicaçao = N1 * N2
-        print(f"O resultado é: {multiplicaçao}\n")
+        print(f"\nO resultado é: {multiplicaçao}\n")
 
     elif menu == "4":
-        divisão = N1 / N2
-        print(f"O resultado é: {divisão}\n")
+        if N1 or N2 != 0:
+            divisão = N1 / N2
+            print(f"\nO resultado é: {divisão}\n")
 
-    else: print("Opção inválida.")
+        else: print(f"\nNão pode dividir por zero.")

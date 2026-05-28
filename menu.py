@@ -13,13 +13,13 @@ while True:
     opçao = input("")
 
     if opçao == "1":
-        print("Opção 1")
+        print("☺️")
 
     elif opçao == "2":
-        print("Opção 2")
+        print("😜")
 
     elif opçao == "3":
-        print("Saindo...")
+        print("🙄")
         break
 
     else: print("Opção inválida.")

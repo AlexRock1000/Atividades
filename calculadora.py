@@ -1,19 +1,20 @@
 def somar(a, b):
     resultado = a + b
-    return resultado
+    print(f"\nO resultado é: {resultado}\n")
 
 def subtrair(a, b):
     resultado = a - b
-    return resultado
+    print(f"\nO resultado é: {resultado}\n")
 
 def multiplicar(a, b):
     resultado = a * b
-    return resultado
+    print(f"\nO resultado é: {resultado}\n")
 
-def dividir(a, b):
-    resultado = a / b
-    return resultado
-
+def dividir(a: float, b: float):
+    if b == 0:
+        print(f"\nNão pode dividir por zero.")
+    
+    else: print(f"\nO resultado é: {a / b}\n")
 
 while True:
     menu = input(f"""
@@ -38,20 +39,13 @@ while True:
     N2 = int(input("Digite um número: "))
 
     if menu == "1":
-        resultado = somar(N1, N2)
-        print(f"\nO resultado é: {resultado}\n")
+        somar(N1, N2)
 
     elif menu == "2":
-        resultado = subtrair(N1, N2)
-        print(f"\nO resultado é: {resultado}\n")
-
+        subtrair(N1, N2)
+        
     elif menu == "3":
-        resultado = multiplicar(N1, N2)
-        print(f"\nO resultado é: {resultado}\n")
+        multiplicar(N1, N2)
 
     elif menu == "4":
-        if N1 or N2 != 0:
-            resultado = dividir(N1, N2)
-            print(f"\nO resultado é: {resultado}\n")
-
-        else: print(f"\nNão pode dividir por zero.")
+        dividir(N1, N2)

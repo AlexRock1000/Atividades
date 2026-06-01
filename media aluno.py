@@ -11,7 +11,7 @@ nota2 = float(input("Digite a segunda nota do aluno: "))
 nota3 = float(input("Digite a terceira nota do aluno: "))
 print("")
 
-calculo_media()
+media = calculo_media(nota1, nota2, nota3)
 print(f"A media do aluno é: {media}")
 print("")
 

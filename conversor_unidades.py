@@ -18,7 +18,8 @@ def temperatura():
 
 def moeda():
     m = float(input("Digite um valor R$: "))
-    cambio = m / 5.7
+    dolar = float(input("Qual é o valor do dolar R$: "))
+    cambio = m / dolar
     print(f"R${m} em Dolar é: R${cambio:.2f}.")
     return cambio
 

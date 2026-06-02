@@ -1,7 +1,7 @@
 def menu():
     print("""
     ====================
-    CONVERSOR DE UIDADES
+    CONVERSOR DE UNIDADES
     ====================
     [1] Celsius -> Fahrenheit
     [2] Reais -> Dolar

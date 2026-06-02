@@ -5,7 +5,7 @@ def menu():
     [1] Boas Vindas.
     [2] O que acho do curso.
     [3] Explicando exercício.
-    [4] Sair.
+    [0] Sair.
     ===================
     """)
 
@@ -26,15 +26,12 @@ while True:
         print("\nOpção inválida.\n")
         continue
 
-    if escolha == "1":
-            mensagem1()
+    if escolha == "1": mensagem1()
 
-    elif escolha == "2":
-            mensagem2()
+    elif escolha == "2": mensagem2()
 
-    elif escolha == "3":
-            mensagem3()
+    elif escolha == "3": mensagem3()
 
-    elif escolha == "4":
+    elif escolha == "0":
         print("\nFalou...\n")
         break

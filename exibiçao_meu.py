@@ -22,7 +22,7 @@ while True:
     menu()
     escolha = input("Escolha uma opção: ")
 
-    if escolha not in ["1","2","3","4"]:
+    if escolha not in ["1","2","3","0"]:
         print("\nOpção inválida.\n")
         continue
 

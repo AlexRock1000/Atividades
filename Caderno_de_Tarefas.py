@@ -36,7 +36,7 @@ def remover():
 
         remov = int(input("Qual tarefa deseja remover? "))
 
-        if 0 < tarefa <= len(tarefas):
+        if 0 < remov <= len(tarefas):
             tarefas.pop(remov - 1)
             print("Tarefa removida.")
 

@@ -1,5 +1,5 @@
 def menu():
-    opçoes = ["Depositar:", "Sacar:", "Ver Saldo:"]
+    opçoes = ["Depositar.", "Sacar.", "Ver Saldo."]
 
     print("""
 ====================
@@ -13,18 +13,18 @@ CADERNO DE TAREFAS
 ====================
     """)
 
+saldo = 0.0
+
 def Depositar():
-    saldo = []
     print(f"Seu saldo é: {saldo}")
-    depo = int(input("Qual o valor que deseja depositar? "))
-    saldo.append(depo)
+    depo = int(input("Qual o valor que deseja depositar: R$ "))
+    saldo = saldo + depo
     print(f"Seu saldo agora é de: R$ {saldo}")
 
 def Sacar():
-    saldo = []
     print(f"Seu saldo é: {saldo}")
     saque = int(input("Quanto deseja sacar: R$ "))
-    saldo.pop(saque)
+    saldo = saldo - saque
     print(f"Agora seu saldo é de: R$ {saldo}")
 
 def Saldo():

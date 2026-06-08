@@ -13,22 +13,29 @@ CADERNO DE TAREFAS
 ====================
     """)
 
-saldo = 0.0
-
-def Depositar():
+def Depositar(saldo):
     print(f"Seu saldo é: {saldo}")
-    depo = int(input("Qual o valor que deseja depositar: R$ "))
+    depo = float(input("Qual o valor que deseja depositar: R$ "))
     saldo = saldo + depo
     print(f"Seu saldo agora é de: R$ {saldo}")
+    return saldo
 
-def Sacar():
+def Sacar(saldo):
     print(f"Seu saldo é: {saldo}")
     saque = int(input("Quanto deseja sacar: R$ "))
-    saldo = saldo - saque
-    print(f"Agora seu saldo é de: R$ {saldo}")
+    
+    if saque > saldo:
+        print("Saldo insuficiente.")
+        return saldo
 
-def Saldo():
+    saldo = saldo - saque
+    print("Saque realizado.")
+    return saldo
+
+def Saldo(saldo):
     print(f"Seu saldo é de: R${saldo}")
+
+saldo = 0.0
 
 while True:
     menu()
@@ -42,8 +49,11 @@ while True:
     if escolha not in ["1","2","3","0"]:
         print("\nOpção inválida.")
 
-    elif escolha == "1": Depositar()
+    elif escolha == "1": 
+        saldo = Depositar(saldo)
 
-    elif escolha == "2": Sacar()
+    elif escolha == "2": 
+        saldo = Sacar(saldo)
 
-    elif escolha == "3": Saldo()
+    elif escolha == "3": 
+        Saldo(saldo)

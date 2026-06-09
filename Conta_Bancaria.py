@@ -22,7 +22,7 @@ def Depositar(saldo):
 
 def Sacar(saldo):
     print(f"Seu saldo é: {saldo}")
-    saque = int(input("Quanto deseja sacar: R$ "))
+    saque = float(input("Quanto deseja sacar: R$ "))
     
     if saque > saldo:
         print("Saldo insuficiente.")

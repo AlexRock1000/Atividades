@@ -12,7 +12,7 @@ class Aluno:
 
     def aprovaçao(self):
         if self.nota >= 6:
-            return "Aprovado!"
+            return "Aprovado! 😎"
         else: 
             return "Reprovado 😥"
 
@@ -33,14 +33,6 @@ def exibir_nota():
         return
     for aluno in alunos:
         aluno.mostrar()
-
-import math
-# Formula de media arredondando para cima:
-def calculo_media(notas: list) -> float:
-    if not notas:
-        return 0.0
-    media = sum(notas) / len(notas)
-    return math.ceil(media)
 
 alunos = []
 

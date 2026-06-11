@@ -17,13 +17,21 @@ def menu():
     =====================
     CADASTRO DE PRODUTOS
     =====================
-    [1] CADASTRAR PRODUTO.   
+    [1] CADASTRAR PRODUTO.
+    [2] EXIBIR PRODUTOS.
     [0] Sair.
     =====================
     """)
 
-p1 = Produto()
-p2 = Produto()
+def exibir_produtos():
+    if not produtos:
+        print("\nNenhum produto cadastrado.")
+        return
+    for produto in produtos:
+        produto.mostrar()
+
+
+produtos = []
 
 while True:
     menu()
@@ -31,14 +39,12 @@ while True:
 
     if opçao == "0":
         break
-
     elif opçao == "1":
-        p1.cadastro()
-        p2.cadastro()
-
+        p = Produto()
+        p.cadastro()
+        produtos.append(p)
+    elif opçao == "2":
+        exibir_produtos()
     else: ("\nOpção inválida.\n")
 
-    p1.mostrar()
-    p2.mostrar()
-    
 print("")

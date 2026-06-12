@@ -1,17 +1,32 @@
+import math
 class Aluno:
-    def __init__(self, nome: str = "", nota: float = 0.0):
+    def __init__(self, nome: str = "", notas = []):
         self.nome = nome
-        self.nota = nota
+        self.notas = notas
 
     def mostrar(self):
-        print(f"\nAluno {self.nome} - Nota {self.nota:.2f} {self.aprovaçao()}")
+        print(f"\nAluno {self.nome} - Nota {self.media:.2f} {self.aprovaçao()}")
 
-    def cadastro(self):
+    def cadastro_Alunos(self):
         self.nome = input(f"\nQual o nome do aluno: ")
-        self.nota = float(input(f"Qual a nota: "))
+        aluno = Aluno()
+        aluno.cadastro_Alunos()
+        alunos.append(aluno)
+        print("Aluno cadastrado.")
 
+    def cadastro_Nota(self):
+        aluno = ("Qual aluno deseja larçar nota: ")
+        aluno.cadastro_Nota()
+        alunos.append(aluno)
+        self.notas = float(input(f"Qual a nota: "))
+        
+    # Formula de media arredondando para cima:
+    def calculo_media(notas: list) -> float:
+        media = sum(notas) / len(notas)
+        return math.ceil(media)
+    
     def aprovaçao(self):
-        if self.nota >= 6:
+        if self.media >= 6:
             return "Aprovado! 😎"
         else: 
             return "Reprovado 😥"
@@ -21,8 +36,10 @@ def menu():
     =====================
     CADASTRO DE NOTAS
     =====================
-    [1] CADASTRAR NOTA.
-    [2] EXIBIR NOTAS.
+    [1] CADASTRAR ALUNO.
+    [2] CADASTRAR NOTAS.
+    [3] EXIBIR ALUNOS.
+    [4] MOSTRA MEDIAS.
     [0] Sair.
     =====================
     """)

@@ -7,7 +7,6 @@ def calculo_media(notas: list) -> float:
 
 lista_notas = []
 
-
 print("")
 nota1 = float(input("Digite a primeira nota do aluno: "))
 nota2 = float(input("Digite a segunda nota do aluno: "))

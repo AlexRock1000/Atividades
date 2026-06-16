@@ -1,36 +1,24 @@
 import math
 class Aluno:
-    def __init__(self, nome: str = "", notas = []):
+    def __init__(self, nome: str):
         self.nome = nome
-        self.notas = notas
+        self.notas = []
 
     def mostrar(self):
-        print(f"\nAluno {self.nome} - Nota {self.media:.2f} {self.aprovaçao()}")
-
-    def cadastro_Alunos(self):
-        self.nome = input(f"\nQual o nome do aluno: ")
-        aluno = Aluno()
-        aluno.cadastro_Alunos()
-        alunos.append(aluno)
-        print("Aluno cadastrado.")
-
-    def cadastro_Nota(self):
-        aluno = ("Qual aluno deseja larçar nota: ")
-        aluno.cadastro_Nota()
-        alunos.append(aluno)
-        self.notas = float(input(f"Qual a nota: "))
+        media = self.calculo_media()
+        print(f"\nAluno {self.nome} - Nota {media:.2f} {self.media}")
         
     # Formula de media arredondando para cima:
-    def calculo_media(notas: list) -> float:
-        media = sum(notas) / len(notas)
-        return math.ceil(media)
-    
-    def aprovaçao(self):
-        if self.media >= 6:
+    def calculo_media(self) -> float:
+        media = sum(self.notas) / len(self.notas)
+        
+        if media >= 6:
             return "Aprovado! 😎"
         else: 
             return "Reprovado 😥"
-
+        
+        return math.ceil(media)
+        
 def menu():
     print("""
     =====================
@@ -44,12 +32,38 @@ def menu():
     =====================
     """)
 
-def exibir_nota():
+def cadastro_Aluno():
+    nome = input(f"\nQual o nome do aluno: ")    
+    aluno = Aluno(nome)
+    alunos.append(aluno)
+    print("Aluno cadastrado.")
+
+def cadastro_Nota():
     if not alunos:
-        print("\nNenhuma nota cadastrada.")
+        print("\nNenhum aluno cadastrado.")
+        return
+    
+    print(alunos)
+    aluno = int(input("Qual aluno deseja larçar nota: ")) - 1
+    nome_aluno = alunos[aluno]
+    nota = float(input(f"Qual a nota: "))
+    nome_aluno.notas.append(nota)
+    print("Nota cadastrada!")
+
+def exibir_media():
+    if not alunos:
+        print("\nNenhum aluno cadastrado.")
+        return
+    for aluno in alunos:
+        print(f"\nNotas do aluno {aluno.nome} media {media}")
+
+def exibir_alunos():
+    if not alunos:
+        print("\nNenhum aluno cadastrad.")
         return
     for aluno in alunos:
         aluno.mostrar()
+
 
 alunos = []
 
@@ -59,12 +73,19 @@ while True:
 
     if opçao == "0":
         break
+
     elif opçao == "1":
-        n = Aluno()
-        n.cadastro()
-        alunos.append(n)
+        cadastro_Aluno()
+
     elif opçao == "2":
-        exibir_nota()
+        cadastro_Nota()
+
+    elif opçao == "3":
+        exibir_alunos()
+
+    elif opçao =="4":
+        exibir_media()
+
     else: print("\nOpção inválida.\n")
 
 print("")
